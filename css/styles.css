@@ -23,11 +23,18 @@ header{
     padding: 2rem;
 }
 
+.logo{
+    text-decoration: none;
+    width: 35rem;
+    height: 5rem;
+    background-color: none;
+}
+
 .banner-principal{
     background-image: url(../img/medellin.jpg);
     position: relative;
-    height: 70rem;
-    width: 158.6rem;
+    height: 75rem;
+    width: auto;
     background-size: cover;
     background-repeat: none;
     padding: 5rem;
@@ -106,15 +113,16 @@ button{
 
 /* Section cards */
 .cards-places{
+    margin: 10rem;
     margin-top: 12rem;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     place-items: center center;
-    
+    /* gap: 14rem; */
 }
 
 .imagen-sitios{
-    width: 100%;
+    width: 70rem;
     display: block;
     border-radius: 20px 20px 0 0;
 }
@@ -122,7 +130,7 @@ button{
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
-    padding: 5px;
+    padding: 10px;
     grid-gap: 40px;
 }
 
@@ -162,7 +170,7 @@ button{
     border-radius: 20px 20px 0 0;
     opacity: 0.7;
 }
-.card1>.container::after{
+/* .card1>.container::after{
     background-image: linear-gradient(
         135deg,
         #0100ec,
@@ -184,6 +192,14 @@ button{
     );
 }
 
+.card4>.container::after{
+    background-image: linear-gradient(
+        135deg,
+        #e32b4a,
+        #42ffdb
+    );
+} */
+
 .detalles{
     padding: 2rem 2rem;
 }
@@ -203,13 +219,6 @@ button{
     font-weight: 400;
 }
 
-.card4>.container::after{
-    background-image: linear-gradient(
-        135deg,
-        #e32b4a,
-        #42ffdb
-    );
-}
 
 /* Footer */
 .pie-pagina{
