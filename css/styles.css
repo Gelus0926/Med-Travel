@@ -53,20 +53,38 @@ header{
 .nav-principal{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     gap: 5rem;
     align-items: center;
-    margin-left: 50rem;
+    margin-left: 30rem;
+    font-size: 2.5rem;
 }
+
 
 .nav-principal a{
     text-decoration: none;
     color: white;
+    margin-right: auto;
+    position: relative;
+    
+}
+
+.nav-principal a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s; 
+}
+
+.nav-principal a:hover::after {
+    width: 100%; 
 }
 
 button{
-    width: 10rem;
-    height: 3.5rem;
+    width: 15rem;
+    height: 4.5rem;
 }
 
 .boton-ingresar{
@@ -74,12 +92,15 @@ button{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: 55rem;
+    margin-left: 23rem;
+    
 }
 
 .boton-ingresar a{
     text-decoration: none;
     color: black;
+    font-size: 1.9rem;
+    
 }
 
 /* Sección information */
@@ -109,50 +130,49 @@ button{
     flex-direction: row;
     -ms-flex-align: center;
     padding: 5px;
+    font-size: 3rem;
 }
+.text-explore{
+    display: flex;
+    font-size: 50px;
+    margin-left: 12rem;
+    margin-top: 10rem;
+    flex-direction: row;
 
+
+}
 /* Section cards */
-.cards-places{
+.cards-places {
     margin: 10rem;
     margin-top: 12rem;
     display: grid;
-    grid-template-columns: auto auto auto;
-    place-items: center center;
-    /* gap: 14rem; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
 }
 
-.imagen-sitios{
-    width: 70rem;
-    display: block;
+.imagen-sitios {
+    width: 100%;
+    height: 300px; /* Ajusta la altura de la imagen según sea necesario */
+    object-fit: cover; /* Ajusta el comportamiento de la imagen para cubrir el contenedor */
     border-radius: 20px 20px 0 0;
 }
 
-.cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 10px;
-    grid-gap: 40px;
+    
 }
 
-.card1{
+.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9{
     background-color: #1c1b29;
     border-radius: 20px;
-    box-shadow: 0 0 30px rgb(0,0,0,0.18);
-}
-.card2{
-    background-color: #1c1b29;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgb(0,0,0,0.18);
-}
-.card3{
-    background-color: #1c1b29;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgb(0,0,0,0.18);
-}
-.card4{
-    background-color: #1c1b29;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgb(0,0,0,0.18);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+    margin-bottom: 3rem;
+    width: 100% /* Ajusta el ancho de cada card según sea necesario */
+
+     /* Ajusta el relleno interno de la card */
 }
 
 .container{
@@ -211,15 +231,25 @@ button{
     margin: 10px 0 15px 0;
 }
 
-.detalles>a{
+.detalles > a {
     text-decoration: none;
     color: #a0a0a0;
     font-size: 2rem;
     line-height: 30px;
     font-weight: 400;
+    position: relative; 
 }
 
-
+.detalles > a:hover::after {
+    content: ''; 
+    display: block;
+    width: 100%; 
+    height: 2px; 
+    background-color: #a0a0a0; 
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+}
 /* Footer */
 .pie-pagina{
     width: 100%;
@@ -245,6 +275,9 @@ button{
 }
 
 .pie-pagina .grupo1 .box figure img{
+    display: flex;
+    justify-content: left;
+    margin-left: 1rem;
     width: 250px;
 }
 
@@ -395,5 +428,59 @@ input[type="submit"]:hover{
 }
 
 .register a:hover{
+    text-decoration: none;
+}
+
+/* Section Contact */
+.Contact-info{
+    background-image: url(../img/image-contact.jpg);
+    display: grid;
+    position: relative;
+    height: 60rem;
+    width: auto;
+    background-size: cover;
+    background-repeat: none;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 10rem;
+    margin-bottom: 40rem;
+}
+
+.information-channels{
+    background-color:#0d2033;
+    text-align: center;
+    display: grid;
+    width: 100rem;
+    align-items: center; 
+    margin-left: 40rem;
+    margin-top: 40rem;
+    height: 50rem;
+}
+
+.information-channels h2{
+    font-size: 5rem;
+    color: white;
+}
+
+.icons-contact{
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 50px;
+    padding: 40px 0;
+    font-size: 5rem;
+}
+
+.icons-contact a{
+    text-decoration: none;
+}
+
+.icons-contact h3{
+    margin: 0.5rem;
+    font-size: 3rem;
+    color: white;
     text-decoration: none;
 }
